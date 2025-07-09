@@ -11,7 +11,7 @@ const Header = ({ language, setLanguage }) => {
   };
 
   const menuItems = {
-    en: ['HOME', 'ABOUT US', 'SERVICES', 'FESTIVALS', 'DONATION', 'CONTACT'],
+    en: ['HOME', 'ABOUT US', 'SERVICES', 'FESTIVALS', 'CONTACT'],
     hi: ['होम', 'हमारे बारे में', 'सेवाएं', 'त्योहार', 'दान', 'संपर्क'],
     or: ['ହୋମ', 'ଆମ ବିଷୟରେ', 'ସେବା', 'ପର୍ବ', 'ଦାନ', 'ଯୋଗାଯୋଗ']
   };
@@ -64,12 +64,7 @@ const Header = ({ language, setLanguage }) => {
             >
               {menuItems[language][3]}
             </button>
-            <button
-              onClick={() => scrollToSection('donation')}
-              className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-300"
-            >
-              {menuItems[language][4]}
-            </button>
+           
             <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-300"

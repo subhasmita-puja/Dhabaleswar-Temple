@@ -8,7 +8,7 @@ const Footer = ({ language }) => {
     en: {
       description: "A sacred sanctuary where tradition meets spiritual devotion, offering divine blessings and peaceful atmosphere.",
       quickLinks: "Quick Links",
-      links: ['Home', 'About Us', 'Services', 'Festivals', 'Donation', 'Contact'],
+      links: ['Home', 'About Us', 'Services', 'Festivals', 'Contact'],
       contactInfo: "Contact Info",
       address: "Gurujanga, Khurda, Odisha, India",
       phone: "+91 98765 43210",
