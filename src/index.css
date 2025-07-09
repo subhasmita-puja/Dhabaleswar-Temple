@@ -109,12 +109,66 @@ select:focus {
   }
 }
 
-/* Print styles */
-@media print {
-  * {
-    background: transparent !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
+@@ .. @@
+ /* Print styles */
+ @media print {
+   * {
+     background: transparent !important;
+     color: black !important;
+     box-shadow: none !important;
+     text-shadow: none !important;
+   }
+}
+
+/* Mouse follower styles */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Hide default cursor on interactive elements when mouse follower is active */
+body {
+  cursor: none;
+}
+
+/* Hide cursor only on desktop when mouse follower is active */
+@media (min-width: 1025px) {
+  body {
+    cursor: none;
   }
+  
+  /* Show default cursor on text inputs and specific elements */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  textarea,
+  select {
+    cursor: text !important;
+  }
+
+  a, button {
+    cursor: pointer !important;
+  }
+}
+
+/* Ensure touch devices show normal cursor */
+@media (max-width: 1024px) {
+  body {
+    cursor: auto !important;
+  }
+  
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Prevent text selection on touch devices when using mouse follower */
+@media (max-width: 1024px) {
+  .mouse-follower-active {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  cursor: auto;
+ }
 }
