@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Clock } from 'lucide-react';
+import templeImage from '../assets/int.png';
 
 const TempleTimings = ({ language }) => {
   const content = {
@@ -98,10 +99,12 @@ const TempleTimings = ({ language }) => {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-orange-100 to-orange-200 h-96 flex items-center justify-center">
-              <div className="text-center text-orange-600">
-                <div className="text-6xl mb-4">🏛️</div>
-                <p className="text-lg font-semibold">Temple Prayer Hall</p>
-              </div>
+             
+                <img 
+                    src={templeImage} 
+                    alt="Temple at night" 
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
             </div>
 
             {/* Floating decorative elements */}
