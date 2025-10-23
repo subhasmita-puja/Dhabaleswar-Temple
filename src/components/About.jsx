@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import templeImage from '../assets/img2.jpg';
 
 const About = ({ language }) => {
   const content = {
@@ -48,12 +49,14 @@ const About = ({ language }) => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-orange-100 to-orange-200 h-96 flex items-center justify-center">
-              <div className="text-center text-orange-600">
-                <div className="text-6xl mb-4">🕉️</div>
-                <p className="text-lg font-semibold">Sacred Temple Interior</p>
-              </div>
-            </div>
+           <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-orange-100 to-orange-200 h-50 flex items-center justify-center">
+  <img 
+    src={templeImage} 
+    alt="Temple at night" 
+    className="w-full h-full object-cover rounded-2xl"
+  />
+</div>
+
             {/* Floating decorative element */}
             <motion.div
               animate={{ rotate: 360 }}
@@ -82,7 +85,7 @@ const About = ({ language }) => {
               <p>
                 {content[language].description1}
               </p>
-              
+
               <p>
                 {content[language].description2}
               </p>
